@@ -28,17 +28,19 @@ function pigLatin (text){
 
     let charsInWord=Array.from (textArray[i]);
     let resultWord=[];
+
     for (let j=0; j<charsInWord.length; j++){
       if (!vowels.includes(charsInWord [j])){
         charsInWord.push(charsInWord [j]);
       } else  if (vowels.includes(charsInWord [j])){
         resultWord=charsInWord.slice (j);
         resultWord.push ("a", "y");
-        const resultWordText=resultWord.join()
-        return resultWord;
+        break;
       }
     }
+   
+    return result.push (resultWord.join(" "));
   }
 }
 
-console.log(pigLatin("code"));
+console.log(pigLatin("code")); 
